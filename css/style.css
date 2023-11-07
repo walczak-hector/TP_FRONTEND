@@ -1,0 +1,96 @@
+table{
+    display: inline-block;
+    width: 40%;
+}
+
+table img{
+    width: 50%;
+    height: auto
+}
+#container {
+    padding-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.clothing {
+    position: absolute;
+    top: 60;
+    left: 0;
+
+  }
+
+.avatar{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 728px;
+    width: 339px;
+  }
+  
+#blusa
+{
+    position: absolute;
+    bottom: 2;
+    left: 0;
+}
+
+#pants
+{
+    position: absolute;
+    bottom: 2;
+    left: 0;
+}
+
+#shoes
+{
+    position: absolute;
+    bottom: 2;
+    left: 0;
+}
+
+body {
+    background: #040404;
+    color: #f7df1e;
+    text-align: center;
+}
+
+characterList{
+    padding-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.character-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre personajes */
+}
+
+.character-container {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    width: 150px; /* Ancho de cada personaje */
+    position: relative; /* Agregar posición relativa */
+}
+
+.character {
+    width: 100%; /* Ajusta el tamaño del personaje */
+    height: auto;
+}
+
+.clothing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el tamaño de la ropa */
+    height: auto;
+}
+/*
+.navbar-brand{
+    text-align: right;
+}*/
