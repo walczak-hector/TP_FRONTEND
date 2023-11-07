@@ -74,12 +74,12 @@ characterList{
     display: inline-block;
     margin: 0;
     text-align: center;
-    width: 150px; /* Ancho de cada personaje */
-    position: relative; /* Agregar posición relativa */
+    width: 150px; 
+    position: relative; 
 }
 
 .character {
-    width: 100%; /* Ajusta el tamaño del personaje */
+    width: 100%; 
     height: auto;
 }
 
@@ -87,9 +87,10 @@ characterList{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ajusta el tamaño de la ropa */
+    width: 100%; 
     height: auto;
 }
+
 /*
 .navbar-brand{
     text-align: right;

@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para cargar los personajes
     const loadCharacters = () => {
-        const token = "eyhbGciOiJIUzI1NeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQ5NTJiNmFiZmU4MmYxMTAwODU3MTIiLCJuYW1lIjoiYiIsImVtYWlsIjoiYiIsImlhdCI6MTY5OTMxNDY5MCwiZXhwIjoxNjk5MzE4MjkwfQ.-UhdtjM2VC3_Joiu63zTyq2XIOVcx2ZgeGouLUQrj5MiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTEwYzMwZTk3NGI0YzcwMzA0Y2EyZjQiLCJuYW1lIjoidGVzdF9uYW1lIiwiZW1haWwiOiJhIiwiaWF0IjoxNjk5MzA3NjE2LCJleHAiOjE2OTkzMTEyMTZ9.1Y7T0JGhFrWURlwZsRrbIwkMQ5CyqXqMQ0PDIatbwDU"; // Obtén el token almacenado en localStorage
-
+        const token = localStorage.getItem("key"); // Obtén el token almacenado en localStorage
         function parseJwt (token) {
                 var base64Url = token.split('.')[1];
                 var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             var decodedToken = parseJwt(token);
             const user_id = decodedToken.userId;
-            console.log(user_id);
         axios.get(`http://localhost:80/dashboard/${user_id}`)
                 .then(response => {
                 const characters = response.data;

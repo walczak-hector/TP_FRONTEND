@@ -35,15 +35,54 @@
               </div>
             </div>
         </nav>
-        <h1>Listado de Personajes</h1>
 
 
+<!-- Formulario de Inicio de Sesión -->
+<div class="container" id="login-form-container">
+  <div class="row">
+      <div class="col-md-4 offset-md-4 mt-5">
+          <h2 class="text-center">Iniciar Sesión</h2>
+          <form id="loginForm">
+              <div class="form-group">
+                  <label >Correo Electrónico</label>
+                  <input  class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+          </form>
+      </div>
+  </div>
+</div>
 
-          <div class="personajes" id="github">
+<!-- Formulario de Registro -->
+<div class="container" id="register-form-container">
+  <div class="row">
+      <div class="col-md-4 offset-md-4 mt-5">
+          <h2 class="text-center">Registro</h2>
+          <form id="registerForm">
+              <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="registerEmail" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" id="registerPassword" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Registrarse</button>
+          </form>
+      </div>
+  </div>
+</div>
 
-          </div>
-          <div id="characterList" class="character-row"></div>
+
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/auth.js"></script>
     </body>
 </html>
