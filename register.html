@@ -12,26 +12,30 @@
   </head>
   <body>
     <div id="nav-placeholder"></div>
-    <div class="container" id="login-form-container">
+    <div class="container" id="register-form-container">
       <div class="row">
         <div class="col-md-4 offset-md-4 mt-5">
-          <h2 class="text-center">Iniciar Sesión</h2></br>
-          <form id="loginForm">
+          <h2 class="text-center" class="form-label">Registro</h2></br>
+          <form id="registerForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
             <div class="mb-3">
               <label for="email" class="form-label">Correo Electrónico</label>
-              <input class="form-control" id="email" name="email" required>
+              <input type="email" class="form-control" id="registerEmail" name="email" required>
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password" name="password" required>
+              <label for="password" class="form-label"  >Contraseña</label>
+              <input type="password" class="form-control" id="registerPassword" name="password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
           </form>
         </div>
       </div>
     </div>
     <script src="js/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
   </body>
 </html>

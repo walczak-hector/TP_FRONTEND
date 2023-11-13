@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 characterImage4.alt = character.shoes;
                 characterImage4.id = "shoes";
                 characterImage4.className = "clothing";
+
+                
                 // Agregar la imagen al contenedor de la lista de personajes
                 characterContainer.appendChild(characterImage1);
                 characterContainer.appendChild(characterImage2);

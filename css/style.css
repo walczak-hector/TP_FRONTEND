@@ -7,6 +7,8 @@ table img{
     width: 50%;
     height: auto
 }
+
+
 #container {
     padding-top: 20px;
     position: relative;
@@ -55,7 +57,7 @@ body {
     text-align: center;
 }
 
-characterList{
+#characterList{
     padding-top: 20px;
     position: relative;
     display: inline-block;
@@ -67,12 +69,12 @@ characterList{
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px; /* Espacio entre personajes */
+    gap: 20px;
 }
 
 .character-container {
     display: inline-block;
-    margin: 0;
+    margin: 10px;
     text-align: center;
     width: 150px; 
     position: relative; 
@@ -90,8 +92,3 @@ characterList{
     width: 100%; 
     height: auto;
 }
-
-/*
-.navbar-brand{
-    text-align: right;
-}*/
