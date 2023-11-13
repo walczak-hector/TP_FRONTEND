@@ -19,7 +19,7 @@ var html = '<nav class="navbar navbar-expand-lg bg-body-tertiary">\
                       <a class="nav-link active" id="login" href="login.html">Login</a> \
                     </li>\
                     <li class="nav-item">\
-                      <a class="nav-link active" id="register" href="register.html">Register</a>\
+                      <a class="nav-link active" id="register" href="register.html">register</a>\
                   </ul>\
                   <span class="navbar-text">\
                     <button class="btn btn-outline-success" type="submit" class="nav-link active" onClick="window.location.assign(window.location.href);" id="myButton">Logout</button>\
@@ -29,29 +29,48 @@ var html = '<nav class="navbar navbar-expand-lg bg-body-tertiary">\
             </nav>';
 document.getElementById('nav-placeholder').innerHTML = html;
 
-// Obtener token del usuario
-const isAuthenticated = localStorage.getItem("key");
-// Obtener los elementos de la interfaz a ocultar
+function isTokenExpired(expirationTime) {
+  if (!expirationTime) {
+    return true;
+  }
+
+  const currentTimestamp = Math.floor(Date.now() / 1000);
+  return currentTimestamp >= expirationTime;
+}
+
+const currentPath = window.location.pathname;
 const login = document.getElementById('login');
 const register = document.getElementById('register');
 const dashboard = document.getElementById('dashboard');
 const create = document.getElementById('create');
 const logout = document.getElementById('myButton');
-if (isAuthenticated != null) {
-  // Si el usuario está autenticado
-  login.style.display = 'none';
-  register.style.display = 'none';
-} else {
-  // Si el usuario no está autenticado
+const currentTimestamp = Math.floor(Date.now() / 1000);
+
+// Obtener el tiempo de expiración del localStorage
+const expirationTime = localStorage.getItem('expirationTime');
+console.log('Current Timestamp:', currentTimestamp);
+console.log('Expiration Time:', expirationTime);
+
+// Verificar si el token ha expirado
+if (isTokenExpired(parseInt(expirationTime, 10))) {
   login.style.display = 'block';
   register.style.display = 'block';
   dashboard.style.display = 'none';
   create.style.display = 'none';
   logout.style.display = 'none';
+  console.log("El token ha expirado");
+  if (currentPath.includes("dashboard.html") || currentPath.includes("create.html")) {
+    window.location.href = "index.html"
+  }
+
+} else {
+  login.style.display = 'none';
+  register.style.display = 'none'; console.log("El token aún es válido");
 }
+
 // Borrar el token del local storage
 const myButton = document.getElementById("myButton");
 myButton.addEventListener("click", function () {
   localStorage.removeItem("key");
-  window.location.href = "index.html"
+  localStorage.removeItem("expirationTime");
 });

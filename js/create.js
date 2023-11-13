@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const characterList = document.getElementById("characterList");
+  function isTokenExpired(expirationTime) {
+    if (!expirationTime) {
+      return true;
+    }
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    return currentTimestamp >= expirationTime;
+  }
 
   const save = async () => {
     var avatar = document.getElementById("avatar").src;
@@ -22,11 +29,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let token = localStorage.getItem("key");
 
-    if (isAuthenticated != null) {
+
+    if (isTokenExpired(parseInt(expirationTime, 10))) {
+      alert("No se ha iniciado sesión");
+        window.location.href = "login.html";
+    
+    } else {
+      const headers = {
+        "Content-type": "application/json; charset=utf-8",
+        Authorization: `Bearer ${token}`,
+      };
+
+      const options = {
+        method: "POST",
+        headers,
+        data: characterData,
+      };
+
+      const createResponse = await axios.post("http://localhost:80/dashboard/", characterData, { headers });
+      const json = createResponse.data;
+
+      location.reload();
+    }
+
+/*
+
+    if (token != null) {
       
       const headers = {
         "Content-type": "application/json; charset=utf-8",
-        Authorization: `Bearer ${isAuthenticated}`,
+        Authorization: `Bearer ${token}`,
       };
 
       const options = {
@@ -42,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         alert("No se ha iniciado sesión");
         window.location.href = "login.html";
-    }
+    }*/
   };
 
   document.getElementById("saveButton").addEventListener("click", save);

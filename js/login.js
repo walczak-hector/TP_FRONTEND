@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
             // Manejar la respuesta del servidor
             if (response.status === 200) {
                 // Inicio de sesión exitoso
-                const token = response.data;
+                const { token, expirationTime } = response.data;
                 console.log(response);
                 // Almacena el token en el almacenamiento local (localStorage)
                 window.localStorage.setItem("key", token);
+                window.localStorage.setItem("expirationTime", expirationTime);
                 console.log(response.data);
                 // Redirige a la página del panel de control o a donde desees
                 window.location.href = "dashboard.html";
