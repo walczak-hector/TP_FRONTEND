@@ -163,5 +163,9 @@ body {
 
 .eliminar:hover {
     background-color: rgb(74, 92, 255);
-    color: #f7df1e;
+    color: #f7df1e; 
+}
+
+.navbar {
+    height: 60px;
 }
