@@ -19,7 +19,7 @@ var html = '<nav class="navbar navbar-expand-lg bg-body-tertiary">\
                       <a class="nav-link active" id="login" href="login.html">Login</a> \
                     </li>\
                     <li class="nav-item">\
-                      <a class="nav-link active" id="register" href="register.html">register</a>\
+                      <a class="nav-link active" id="register" href="register.html">Register</a>\
                   </ul>\
                   <span class="navbar-text">\
                     <button class="btn btn-outline-success" type="submit" class="nav-link active" onClick="window.location.assign(window.location.href);" id="myButton">Logout</button>\
@@ -53,4 +53,5 @@ if (isAuthenticated != null) {
 const myButton = document.getElementById("myButton");
 myButton.addEventListener("click", function () {
   localStorage.removeItem("key");
+  window.location.href = "index.html"
 });

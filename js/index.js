@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const characterImage1 = document.createElement("img");
                 characterImage1.src = character.avatar;
                 characterImage1.alt = character.avatar;
-                characterImage1.className = "clothing";
+                characterImage1.className = "character";
 
                 const characterImage2 = document.createElement("img");
                 characterImage2.src = character.upper;

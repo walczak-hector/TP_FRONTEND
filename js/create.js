@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       location.reload();
     } else {
         alert("No se ha iniciado sesión");
-        window.location.href = "login.html"
+        window.location.href = "login.html";
     }
   };
 

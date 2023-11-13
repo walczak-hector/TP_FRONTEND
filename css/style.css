@@ -1,13 +1,12 @@
-table{
+table {
     display: inline-block;
     width: 40%;
 }
 
-table img{
+table img {
     width: 50%;
     height: auto
 }
-
 
 #container {
     padding-top: 20px;
@@ -15,37 +14,67 @@ table img{
     display: inline-block;
 }
 
-.clothing {
-    position: absolute;
-    top: 60;
-    left: 0;
+#container-2 {
+    position: relative;
+    display: inline-flex;
+    background: #ffffff
+}
 
-  }
+.create-container {
+    position: relative;
+    display: inline-flex;
+    width: 194px;
+}
 
-.avatar{
+.button-shirt {
+    height: 80px;
+    width: 130px;
+}
+
+.button-pants {
+    height: 140px;
+    width: 130px;
+}
+
+.button-shoes {
+    width: 130px;
+}
+
+.button-icon {
+    background-color: #ffffff;
+    width: 130px;
+}
+
+.button-icon:hover {
+    background-color: #f7df1e;
+}
+
+#table-create {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar {
     position: absolute;
     left: 0px;
     top: 0px;
     height: 728px;
     width: 339px;
-  }
-  
-#blusa
-{
+}
+
+#blusa {
     position: absolute;
     bottom: 2;
     left: 0;
 }
 
-#pants
-{
+#pants {
     position: absolute;
     bottom: 2;
     left: 0;
 }
 
-#shoes
-{
+#shoes {
     position: absolute;
     bottom: 2;
     left: 0;
@@ -57,7 +86,7 @@ body {
     text-align: center;
 }
 
-#characterList{
+#characterList {
     padding-top: 20px;
     position: relative;
     display: inline-block;
@@ -76,19 +105,63 @@ body {
     display: inline-block;
     margin: 10px;
     text-align: center;
-    width: 150px; 
-    position: relative; 
+    width: 150px;
+    position: relative;
 }
 
 .character {
-    width: 100%; 
+    width: 100%;
     height: auto;
+    background: #ffffff;
 }
 
 .clothing {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: auto;
+}
+
+#saveButton {
+    background-color: #f7df1e;
+    border: none;
+    color: rgb(74, 92, 255);
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 523px;
+}
+
+#saveButton:hover {
+    background-color: rgb(74, 92, 255);
+    color: #f7df1e;
+}
+
+.eliminar {
+    position: absolute;
+    left: 25%;
+    bottom: -10%;
+    bottom: 1;
+    z-Index: "1";
+    background-color: #f7df1e;
+    border: none;
+    color: rgb(74, 92, 255);
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.eliminar:hover {
+    background-color: rgb(74, 92, 255);
+    color: #f7df1e;
 }

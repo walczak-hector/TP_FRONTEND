@@ -12,57 +12,60 @@
   </head>
   <body>
     <div id="nav-placeholder"></div>
-
-    <div id="container">
-      <img src="images/blank.png" id="avatar">
-      <img src="images/blank.png" id="blusa">
-      <img src="images/blank.png" id="pants">
-      <img src="images/blank.png" id="shoes">
+    <h1>Crear Personaje</h1><br>
+    <div class="mb-3">
+    <div id="container-2">
+      <img src="images/blank.png" id="avatar" class="create-container">
+      <img src="images/blank.png" id="blusa" class="create-container">
+      <img src="images/blank.png" id="pants" class="create-container">
+      <img src="images/blank.png" id="shoes" class="create-container">
     </div>
-
-    <table>
+    <table id="table-create">
       <tr>
-        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_1.png"><img
+        <th><button class = "button-icon" type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_1.png"><img
               src="images/avatars/Avatar_1.png"></button></th>
-        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_2.png"><img
+        <th><button class = "button-icon" type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_2.png"><img
               src="images/avatars/Avatar_2.png"></button></th>
-        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_3.png"><img
+        <th><button class = "button-icon" type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_3.png"><img
               src="images/avatars/Avatar_3.png"></button></th>
-        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_4.png"><img
-              src="images/avatars/Avatar_4.png"></button></th>
+        <th><button class = "button-icon" type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_4.png"><img
+              src="images/avatars/Avatar_4.png"></button></td>
       </tr>
       <tr>
-        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_1.png"><img
-              src="images/icons/blusa_icon_1.png"></button></th>
-        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_2.png"><img
-              src="images/icons/blusa_icon_2.png"></button></th>
-        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_3.png"><img
-              src="images/icons/blusa_icon_3.png"></button></th>
-        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_4.png"><img
-              src="images/icons/blusa_icon_4.png"></button></th>
+        <td><button class = "button-shirt button-icon" type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_1.png"><img
+              src="images/icons/blusa_icon_1.png"></button></td>
+        <td><button class = "button-shirt button-icon" type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_2.png"><img
+              src="images/icons/blusa_icon_2.png"></button></td>
+        <td><button class = "button-shirt button-icon" type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_3.png"><img
+              src="images/icons/blusa_icon_3.png"></button></td>
+        <td><button class = "button-shirt button-icon" type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_4.png"><img
+              src="images/icons/blusa_icon_4.png"></button></td>
       </tr>
       <tr>
-        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_1.png"><img
-              src="images/icons/pants_icon_1.png"></button></th>
-        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_2.png"><img
-              src="images/icons/pants_icon_2.png"></button></th>
-        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_3.png"><img
-              src="images/icons/pants_icon_3.png"></button></th>
-        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_4.png"><img
-              src="images/icons/pants_icon_4.png"></button></th>
+        <td><button class = "button-pants button-icon" type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_1.png"><img
+              src="images/icons/pants_icon_1.png"></button></td>
+        <td><button class = "button-pants button-icon" type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_2.png"><img
+              src="images/icons/pants_icon_2.png"></button></td>
+        <td><button class = "button-pants button-icon" type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_3.png"><img
+              src="images/icons/pants_icon_3.png"></button></td>
+        <td><button class = "button-pants button-icon" type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_4.png"><img
+              src="images/icons/pants_icon_4.png"></button></td>
       </tr>
       <tr>
-        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_1.png"><img
-              src="images/icons/shoes_icon_1.png"></button></th>
-        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_2.png"><img
-              src="images/icons/shoes_icon_2.png"></button></th>
-        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_3.png"><img
-              src="images/icons/shoes_icon_3.png"></button></th>
-        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_4.png"><img
-              src="images/icons/shoes_icon_4.png"></button></th>
+        <td><button class = "button-shoes button-icon" type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_1.png"><img
+              src="images/icons/shoes_icon_1.png"></button></td>
+        <td><button class = "button-shoes button-icon" type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_2.png"><img
+              src="images/icons/shoes_icon_2.png"></button></td>
+        <td><button class = "button-shoes button-icon" type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_3.png"><img
+              src="images/icons/shoes_icon_3.png"></button></td>
+        <td><button class = "button-shoes button-icon" type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_4.png"><img
+              src="images/icons/shoes_icon_4.png"></button></td>
       </tr>
-    </table>
-    <button type="submit" id="saveButton">Guardar</button>
+      <tr>
+            <td colspan="4"><button type="submit" id="saveButton">Guardar</button></td>
+      </tr>
+    </table></div>
+    
     <script>
       function show_avatar(button) {
         var avatar = document.getElementById("avatar");
