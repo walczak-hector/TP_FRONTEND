@@ -51,30 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       location.reload();
     }
-
-/*
-
-    if (token != null) {
-      
-      const headers = {
-        "Content-type": "application/json; charset=utf-8",
-        Authorization: `Bearer ${token}`,
-      };
-
-      const options = {
-        method: "POST",
-        headers,
-        data: characterData,
-      };
-
-      const createResponse = await axios.post("http://localhost:80/dashboard/", characterData, { headers });
-      const json = createResponse.data;
-
-      location.reload();
-    } else {
-        alert("No se ha iniciado sesión");
-        window.location.href = "login.html";
-    }*/
   };
 
   document.getElementById("saveButton").addEventListener("click", save);
